@@ -1,6 +1,6 @@
-# MovieX
+# CineCraze
 
-MovieX is a movie information platform built with React and Redux, designed to provide users with detailed movie data and an engaging user experience. The application features dynamic movie listings, detailed movie pages, and search functionality, all styled using Tailwind CSS.
+CineCraze is a movie platform built with React and Redux, designed to provide users with detailed movie data and an engaging user experience. The application features dynamic movie listings, detailed movie pages, and search functionality, all styled using Tailwind CSS.
 
 ## Installation
 Installation
@@ -9,12 +9,12 @@ Clone and Setup
 
 1-Clone the repository:
 ````markdown
-git clone https://github.com/Vikas-rawat1/moviex.git
+git clone https://github.com/Vikas-rawat1/cinecraze.git
 ````
 
 2-Navigate to the project directory:
 ````markdown
-cd moviex
+cd cinecraze
 ````
 3-Install dependencies:
 ````markdown
