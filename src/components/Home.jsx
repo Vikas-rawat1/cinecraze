@@ -7,7 +7,7 @@ import HorizontalCards from "./partial/HorizontalCards";
 import Dropdown from "./partial/Dropdown";
 
 function Home() {
-  document.title = "Moviex|HomePage";
+  document.title = "CineCraze|HomePage";
   const [wallpaper, setWallpaper] = useState(null);
   const [trending, setTrending] = useState(null);
   const [category, setCategory] = useState("all");

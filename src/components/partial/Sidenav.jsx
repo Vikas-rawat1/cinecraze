@@ -6,7 +6,7 @@ function Sidenav() {
       <div className="w-[20%] h-[100%] border-r-2 border-zinc-400 p-10">
         <h1 className="text-2xl text-white font-bold">
           <i className="text-[#6556CD] ri-tv-fill mr-2"></i>
-          <span className="text-2xl">SCDB</span>
+          <span className="text-2xl">CineCraze</span>
         </h1>
         <nav className="flex flex-col text-zinc-400 text-sm">
           <h1 className="text-white font-semibold text-xl mt-6">New Feeds</h1>
@@ -32,7 +32,7 @@ function Sidenav() {
             Website Information
           </h1>
           <Link className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
-            <i className="ri-information-fill"></i> About Moviex
+            <i className="ri-information-fill"></i> About CineCraze
           </Link>
           <Link className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
             <i className="ri-phone-fill"></i> Contact Us
