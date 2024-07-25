@@ -29,7 +29,7 @@ npm run dev
 Thanks to the contributors and libraries that made this project possible.
 
 ## 🚀 About Me
-I'm Vikas, a web developer with a passion for crafting engaging and user-friendly web experiences. Currently pursuing a BCA (Bachelor of Computer Applications), I specialize in front-end development using React and Tailwind CSS. My goal is to blend innovative design with efficient code to create impactful applications.
+I'm Vikas, a web developer with a passion for crafting engaging and user-friendly web experiences. Currently pursuing a BCA (Bachelor of Computer Applications), I specialize in front-end development using React and Tailwind CSS and with Redux for managing application state and Axios for handling HTTP requests. My goal is to blend innovative design with efficient code to create impactful applications.
 
 
 ## 🔗 Links
