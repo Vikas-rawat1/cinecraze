@@ -5,6 +5,7 @@ import axios from "../utils/axios";
 import Header from "./partial/Header";
 import HorizontalCards from "./partial/HorizontalCards";
 import Dropdown from "./partial/Dropdown";
+import Loading from "./partial/Loading";
 
 function Home() {
   document.title = "CineCraze|HomePage";
@@ -59,7 +60,7 @@ function Home() {
       </div>
     </>
   ) : (
-    <h1>Loading...</h1>
+    <Loading/>
   );
 }
 
