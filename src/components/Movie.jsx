@@ -22,7 +22,7 @@ function Movie() {
   const GetMovie = async () => {
     try {
       const { data } = await axios.get(`/movie/${category}?page=${page}`);
-      console.log(data);
+      // console.log(data);
       if (data.results.length > 0) {
         setMovie((prevState) => [...prevState, ...data.results]);
         setPage(page + 1);
@@ -76,7 +76,7 @@ function Movie() {
           hasMore={hasMore}
           loader={<h1>loading</h1>}
         >
-          <Cards data={movie} title={movie} />
+          <Cards data={movie} title="movie" />
         </InfiniteScroll>
       </div>
     </>
