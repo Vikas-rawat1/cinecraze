@@ -5,19 +5,25 @@ import { Link } from "react-router-dom";
 function Cards({ data, title }) {
   return (
     <>
-      <div className="w-full flex flex-wrap gap-10 h-[vh] p-[5%] bg-[#1F1E24]">
+      <div className="w-full flex flex-wrap gap-10  p-[5%] bg-[#1F1E24] overflow-hidden overflow-x-hidden">
         {data.map((card, index) => (
-          <Link className="w-[40vh]   mb-[5%]" key={index}>
+          <Link className=" relative w-[40vh] mb-[5%]" key={index}>
             <img
               className="shadow-[8px_17px_38px_2px_rgba(0.0.0.5)] w-[40vh] object-cover"
               src={`https://image.tmdb.org/t/p/original/${
-                card.poster_path || card.backdrop_path
+                card.poster_path || card.backdrop_path || card.profile_path
               }`}
               alt=""
             />
-            <h1 className="text-2xl text-zinc-200 mt-3 font-semibold">
+            <h1 className="text-xl text-zinc-200 mt-3 font-semibold">
               {card.title || card.original_name || card.original_title}
             </h1>
+
+            {card.vote_average && (
+              <div className="absolute right-[-15%] bottom-[25%] rounded-full font-semibold text-xl bg-yellow-500 text-white w-[10vh] h-[10vh] flex justify-center items-center">
+                {(card.vote_average * 10).toFixed()} <sup>%</sup>
+              </div>
+            )}
           </Link>
         ))}
       </div>

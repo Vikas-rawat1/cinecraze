@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Topnav from "./Topnav";
-import Dropdown from "./Dropdown";
-import axios from "../../utils/axios";
-import Cards from "./Cards";
+import Topnav from "./partial/Topnav";
+import Dropdown from "./partial/Dropdown";
+import axios from "../utils/axios";
+import Cards from "./partial/Cards";
 import Loading from "./Loading";
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -18,7 +18,8 @@ function Trending() {
   const [duration, setDuration] = useState("day");
   const [trending, setTrending] = useState([]);
   const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  document.title = "CineCraze | Trending " + category.toUpperCase();
 
   const GetTrending = async () => {
     try {
@@ -30,7 +31,7 @@ function Trending() {
         setTrending((prevState) => [...prevState, ...data.results]);
         setPage(page + 1);
       } else {
-        setHasMore(fales);
+        setHasMore(false);
       }
 
       // setTrending(data.results);
@@ -46,7 +47,7 @@ function Trending() {
     } else {
       setPage(1);
       setTrending([]);
-      // GetTrending();
+      GetTrending();
     }
   };
 

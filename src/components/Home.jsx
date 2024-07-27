@@ -5,10 +5,10 @@ import axios from "../utils/axios";
 import Header from "./partial/Header";
 import HorizontalCards from "./partial/HorizontalCards";
 import Dropdown from "./partial/Dropdown";
-import Loading from "./partial/Loading";
+import Loading from "./Loading";
 
 function Home() {
-  document.title = "CineCraze|HomePage";
+  document.title = "CineCraze | HomePage" ;
   const [wallpaper, setWallpaper] = useState(null);
   const [trending, setTrending] = useState(null);
   const [category, setCategory] = useState("all");

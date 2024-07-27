@@ -13,16 +13,16 @@ function Sidenav() {
           <Link to="/trending" className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
             <i className="ri-fire-line"></i> Trending
           </Link>
-          <Link className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
+          <Link to="/popular" className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
             <i className="ri-bard-fill"></i> Popular
           </Link>
-          <Link className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
+          <Link to="/movie" className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
             <i className="ri-movie-2-fill"></i> Movies
           </Link>
-          <Link className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
+          <Link to="/tvshows" className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
             <i className="ri-tv-fill"></i> TV Shows
           </Link>
-          <Link className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
+          <Link to="/people" className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5">
             <i className="ri-team-fill"></i> People
           </Link>
         </nav>
