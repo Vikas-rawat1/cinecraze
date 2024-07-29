@@ -1,14 +1,14 @@
-import { data } from "autoprefixer";
 import React from "react";
 import { Link } from "react-router-dom";
 
 function Cards({ data, title }) {
+  // console.log(data)
   return (
     <>
       <div className="w-full flex flex-wrap gap-10  p-[5%] bg-[#1F1E24] overflow-hidden overflow-x-hidden">
         {data.map((card, index) => (
           <Link
-            to={`${data.media_type || title}${card.id}`}
+            to={`/${card.media_type || title}/details/${card.id}`}
             className=" relative w-[40vh] mb-[5%]"
             key={index}
           >
