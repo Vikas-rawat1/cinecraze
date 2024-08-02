@@ -1,7 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncloadmovie, removemovie } from "../store/actions/movieActions";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import {
+  Link,
+  Outlet,
+  useLocation,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import Loading from "./Loading";
 import HorizontalCards from "./partial/HorizontalCards";
 
@@ -164,6 +170,7 @@ function Moviedetails() {
           info.recommendations.length > 0 ? info.recommendations : info.similar
         }
       />
+      <Outlet />
     </div>
   ) : (
     <Loading />
