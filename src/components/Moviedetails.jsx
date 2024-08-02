@@ -39,7 +39,7 @@ function Moviedetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-screen h-[100vw] px-[10%]"
+      className="relative w-screen h-[100vw] px-[10%]"
     >
       {/* PART 1 NAVIGATION */}
       <nav className="h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
