@@ -12,7 +12,7 @@ function HorizontalCards({ data }) {
           <Link
             to={`/${card.media_type}/details/${card.id}`}
             key={index}
-            className="min-w-[25%]  mr-5 mb-5 bg-zinc-900"
+            className="min-w-[25%] h-[30vw] mr-5 mb-5 bg-zinc-900"
           >
             <img
               className="w-full h-[55%] object-cover"

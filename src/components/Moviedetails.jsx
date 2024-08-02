@@ -33,7 +33,7 @@ function Moviedetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-screen h-[170vh] px-[10%]"
+      className="w-screen h-[100vw] px-[10%]"
     >
       {/* PART 1 NAVIGATION */}
       <nav className="h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
@@ -155,8 +155,14 @@ function Moviedetails() {
         )}
       </div>
       {/* PART 3 Recomendations and Similar Stuff*/}
+      <hr className="mt-10 mb-5 border-none h-[2px] bg-zinc-200" />
+      <h1 className="text-3xl mt-5 mb-10 font-semibold text-white">
+        Recommendations And Similar Stuff
+      </h1>
       <HorizontalCards
-        data={info.recommendations.length>0 ? info.recommendations : info.similar}
+        data={
+          info.recommendations.length > 0 ? info.recommendations : info.similar
+        }
       />
     </div>
   ) : (
