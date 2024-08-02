@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Loading from "./Loading";
 import HorizontalCards from "./partial/HorizontalCards";
+
 function TvDetails() {
   const navigate = useNavigate();
 
@@ -18,9 +19,9 @@ function TvDetails() {
   };
   const { pathname } = useLocation();
   const { id } = useParams();
-  const { info } = useSelector((state) => state.tv);
+  const { info } = useSelector((state) => state.movie);
   const dispatch = useDispatch();
-  // console.log(info);
+  console.log(info);
 
   useEffect(() => {
     dispatch(asyncloadtv(id));
@@ -28,6 +29,7 @@ function TvDetails() {
       dispatch(removetv());
     };
   }, [id]);
+
   return info ? (
     <div
       style={{
@@ -101,7 +103,7 @@ function TvDetails() {
           </h1>
           <h1 className="text-xl mb-3 mt-3">Overview</h1>
           <p>{info.detail.overview}</p>
-          <h1 className="text-xl mb-3 mt-5">tv Translated</h1>
+          <h1 className="text-xl mb-3 mt-5">Tv Translated</h1>
           <p className=" mb-10">{info.translations.join(", ")}</p>
           <Link
             className="p-3 overflow-hidden bg-[#6556CD] rounded-lg"
@@ -162,7 +164,33 @@ function TvDetails() {
           </div>
         )}
       </div>
-      {/* PART 3 Recomendations and Similar Stuff*/}
+
+      {/* PART 4 Seasons*/}
+      <hr className="mt-10 mb-5 border-none h-[2px] bg-zinc-500" />
+      <h1 className="text-3xl mt-5 mb-10 font-semibold text-white">Seasons</h1>
+      <div className="w-[100%] flex h-[70vh] overflow-y-hidden mb-5 p-5 ">
+        {info.detail.season.length > 0 ? (
+          info.detail.seasons.map((season, index) => (
+            <div className="w-[15vh] mr-[8%]" key={index}>
+              <img
+                className="shadow-[8px_17px_38px_2px_rgba(0.0.0.5)] h-[30vh] min-w-[14vw] object-cover"
+                src={`https://image.tmdb.org/t/p/original/${season.poster_path}`}
+                alt=""
+              />
+              <h1 className="text-2xl text-zinc-300 mt-3 font-semibold">
+                {season.name}
+              </h1>
+            </div>
+          ))
+        ) : (
+          <h1 className="text-3xl font-black text-white text-center mt-5 ">
+            Nothing to show
+          </h1>
+        )}
+      </div>
+      <HorizontalCards data={info.detail.seasons} />
+
+      {/* PART 5 Recomendations and Similar Stuff*/}
       <hr className="mt-10 mb-5 border-none h-[2px] bg-zinc-500" />
       <h1 className="text-3xl mt-5 mb-10 font-semibold text-white">
         Recommendations And Similar Stuff
