@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { asyncloadmovie, removemovie } from "../store/actions/movieActions";
+import { asyncloadtv, removetv } from "../store/actions/tvActions";
 import {
   Link,
   Outlet,
@@ -18,14 +18,14 @@ function TvDetails() {
   };
   const { pathname } = useLocation();
   const { id } = useParams();
-  const { info } = useSelector((state) => state.movie);
+  const { info } = useSelector((state) => state.tv);
   const dispatch = useDispatch();
-  console.log(info);
+  // console.log(info);
 
   useEffect(() => {
-    dispatch(asyncloadmovie(id));
+    dispatch(asyncloadtv(id));
     return () => {
-      dispatch(removemovie());
+      dispatch(removetv());
     };
   }, [id]);
   return info ? (
@@ -80,7 +80,7 @@ function TvDetails() {
               info.detail.original_title}
 
             <small className="text-xl font-bold text-zinc-200 ">
-              ({info.detail.release_date.split("-")[0]})
+              ({info.detail.first_air_date.split("-")[0]})
             </small>
           </h1>{" "}
           <div className="mt-3 mb-5 flex  items-center gap-x-5 gap-y-10">
@@ -90,7 +90,7 @@ function TvDetails() {
             <h1 className="w-[60px] font-semibold text-xl leading-6">
               User Score
             </h1>
-            <h1 className="w">{info.detail.release_date}</h1>
+            <h1 className="w">{info.detail.first_air_date}</h1>
             <h1 className="w">
               {info.detail.genres.map((g) => g.name).join(",")}
             </h1>
@@ -101,7 +101,7 @@ function TvDetails() {
           </h1>
           <h1 className="text-xl mb-3 mt-3">Overview</h1>
           <p>{info.detail.overview}</p>
-          <h1 className="text-xl mb-3 mt-5">Movie Translated</h1>
+          <h1 className="text-xl mb-3 mt-5">tv Translated</h1>
           <p className=" mb-10">{info.translations.join(", ")}</p>
           <Link
             className="p-3 overflow-hidden bg-[#6556CD] rounded-lg"
