@@ -34,6 +34,7 @@ function Moviedetails() {
       }}
       className="w-screen h-screen px-[10%]"
     >
+      {/* PART 1 NAVIGATION */}
       <nav className="h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
         <Link
           onClick={goBack}
@@ -52,6 +53,16 @@ function Moviedetails() {
           imdb
         </a>
       </nav>
+      {/* PART 2 POSTER AND DETAILS */}
+      <div className="w-full flex">
+        <img
+          className="shadow-[8px_17px_38px_2px_rgba(0.0.0.5)] w-[40vh] object-cover"
+          src={`https://image.tmdb.org/t/p/original/${
+            info.detail.poster_path || info.detail.backdrop_path
+          }`}
+          alt=""
+        />
+      </div>
     </div>
   ) : (
     <Loading />
