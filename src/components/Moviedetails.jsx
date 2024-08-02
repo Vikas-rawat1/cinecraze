@@ -14,7 +14,7 @@ function Moviedetails() {
   const { id } = useParams();
   const { info } = useSelector((state) => state.movie);
   const dispatch = useDispatch();
-  console.log(info);
+  // console.log(info);
 
   useEffect(() => {
     dispatch(asyncloadmovie(id));
@@ -53,6 +53,7 @@ function Moviedetails() {
           imdb
         </a>
       </nav>
+
       {/* PART 2 POSTER AND DETAILS */}
       <div className="w-full flex">
         <img
@@ -62,6 +63,67 @@ function Moviedetails() {
           }`}
           alt=""
         />
+        <div>
+          {info.watchproviders &&
+            info.watchproviders.flatrate &&
+            info.watchproviders.flatrate.map((w) => (
+              <img
+                className="w-[5vh] h-[5vh] object-cover rounded-md"
+                src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
+                alt=""
+              />
+            ))}
+        </div>
+
+        {/* </div> */}
+
+        {/* PART 3 available on PLATFORM*/}
+
+        {/* <div className="w-[80%] ">
+        <div className="mt-5">
+          {info.watchproviders &&
+            info.watchproviders.flatrate &&
+            info.watchproviders.flatrate.map((w) => (
+              <img
+                className="w-[5vh] h-[5vh] object-cover rounded-md"
+                src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
+                alt=""
+              />
+            ))}
+
+          {info.watchproviders && info.watchproviders.rent && (
+            <div className="flex gap-x-10 items-center text-white">
+              <h1>Available on Rent</h1>
+              {info.watchproviders.rent.map((w) => (
+                <img
+                  className="w-[5vh] h-[5vh] object-cover rounded-md"
+                  src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
+                  alt=""
+                />
+              ))}
+            </div>
+          )} */}
+
+        {/* {info.watchproviders &&
+            info.watchproviders.rent &&
+            info.watchproviders.rent.map((w) => (
+              <img
+                className="w-[5vh] h-[5vh] object-cover rounded-md"
+                src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
+                alt=""
+              />
+            ))} */}
+        {/* {info.watchproviders &&
+            info.watchproviders.buy &&
+            info.watchproviders.buy.map((w) => (
+              <img
+                className="w-[5vh] h-[5vh] object-cover rounded-md"
+                src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
+                alt=""
+              />
+            ))} */}
+        {/* </div>
+      </div> */}
       </div>
     </div>
   ) : (
