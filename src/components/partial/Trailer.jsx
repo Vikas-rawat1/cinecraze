@@ -10,7 +10,7 @@ function Trailer() {
 
   const ytvideo = useSelector((state) => state[category].info.videos);
 
-  // console.log(ytvideo);
+  console.log(pathname.includes("movie"),ytvideo);
 
   const navigate = useNavigate();
 

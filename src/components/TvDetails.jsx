@@ -19,7 +19,7 @@ function TvDetails() {
   };
   const { pathname } = useLocation();
   const { id } = useParams();
-  const { info } = useSelector((state) => state.movie);
+  const { info } = useSelector((state) => state.tv);
   const dispatch = useDispatch();
   console.log(info);
 
@@ -40,10 +40,10 @@ function TvDetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-screen h-[100vw] px-[10%]"
+      className="relative w-screen h-[140vw] px-[10%]"
     >
       {/* PART 1 NAVIGATION */}
-      <nav className="h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
+      <nav className="mb-5 h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
         <Link
           onClick={goBack}
           className="hover:text-[#6556CD] ri-arrow-left-line text-3xl"
@@ -167,18 +167,18 @@ function TvDetails() {
 
       {/* PART 4 Seasons*/}
       <hr className="mt-10 mb-5 border-none h-[2px] bg-zinc-500" />
-      <h1 className="text-3xl mt-5 mb-10 font-semibold text-white">Seasons</h1>
+      <h1 className="text-3xl mt-5 mb-5 font-semibold text-white">Seasons</h1>
       <div className="w-[100%] flex h-[70vh] overflow-y-hidden mb-5 p-5 ">
-        {info.detail.season.length > 0 ? (
-          info.detail.seasons.map((season, index) => (
-            <div className="w-[15vh] mr-[8%]" key={index}>
+        {info.detail.seasons.length > 0 ? (
+          info.detail.seasons.map((s, index) => (
+            <div className="w-[15vh] mr-[14%]" key={index}>
               <img
-                className="shadow-[8px_17px_38px_2px_rgba(0.0.0.5)] h-[30vh] min-w-[14vw] object-cover"
-                src={`https://image.tmdb.org/t/p/original/${season.poster_path}`}
+                className="shadow-[8px_17px_38px_2px_rgba(0.0.0.5)] h-[50vh] min-w-[14vw] object-cover"
+                src={`https://image.tmdb.org/t/p/original/${s.poster_path}`}
                 alt=""
               />
               <h1 className="text-2xl text-zinc-300 mt-3 font-semibold">
-                {season.name}
+                {s.name}
               </h1>
             </div>
           ))
@@ -188,7 +188,7 @@ function TvDetails() {
           </h1>
         )}
       </div>
-      <HorizontalCards data={info.detail.seasons} />
+      {/* <HorizontalCards data={info.detail.seasons} /> */}
 
       {/* PART 5 Recomendations and Similar Stuff*/}
       <hr className="mt-10 mb-5 border-none h-[2px] bg-zinc-500" />
