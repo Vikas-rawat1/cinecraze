@@ -8,7 +8,7 @@ export const tvSlice = createSlice({
   initialState,
   reducers: {
     loadtv: (state, action) => {
-      state.info = action.played;
+      state.info = action.payload;
     },
 
     removetv: (state, action) => {

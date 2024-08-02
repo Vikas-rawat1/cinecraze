@@ -42,7 +42,7 @@ function Moviedetails() {
       className="relative w-screen h-[100vw] px-[10%]"
     >
       {/* PART 1 NAVIGATION */}
-      <nav className="h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
+      <nav className="mb-6 h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
         <Link
           onClick={goBack}
           className="hover:text-[#6556CD] ri-arrow-left-line text-3xl"
@@ -165,7 +165,7 @@ function Moviedetails() {
       </div>
       {/* PART 3 Recomendations and Similar Stuff*/}
       <hr className="mt-10 mb-5 border-none h-[2px] bg-zinc-500" />
-      <h1 className="text-3xl mt-5 mb-10 font-semibold text-white">
+      <h1 className="text-3xl   mt-5 mb-10 font-semibold text-white">
         Recommendations And Similar Stuff
       </h1>
       <HorizontalCards
