@@ -80,7 +80,7 @@ function TvDetails() {
               info.detail.original_title}
 
             <small className="text-xl font-bold text-zinc-200 ">
-              ({info.detail.first_air_date.split("-")[0]})
+              ({info.detail.release_date.split("-")[0]})
             </small>
           </h1>{" "}
           <div className="mt-3 mb-5 flex  items-center gap-x-5 gap-y-10">
@@ -90,7 +90,7 @@ function TvDetails() {
             <h1 className="w-[60px] font-semibold text-xl leading-6">
               User Score
             </h1>
-            <h1 className="w">{info.detail.first_air_date}</h1>
+            <h1 className="w">{info.detail.release_date}</h1>
             <h1 className="w">
               {info.detail.genres.map((g) => g.name).join(",")}
             </h1>
