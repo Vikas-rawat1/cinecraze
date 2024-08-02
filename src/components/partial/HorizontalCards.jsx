@@ -12,7 +12,7 @@ function HorizontalCards({ data }) {
           <Link
             to={`/${card.media_type}/details/${card.id}`}
             key={index}
-            className="min-w-[25%] h-full mr-5 mb-5 bg-zinc-900"
+            className="min-w-[25%]  mr-5 mb-5 bg-zinc-900"
           >
             <img
               className="w-full h-[55%] object-cover"
@@ -21,7 +21,7 @@ function HorizontalCards({ data }) {
               })`}
               alt=""
             />
-            <div className="text-white p-3 h-[45%]">
+            <div className="text-white p-3 h-[45%] overflow-y-auto">
               <h1 className="text-xl font-semibold mt-2">
                 {card.title || card.original_name || card.original_title}
               </h1>
