@@ -2,6 +2,7 @@ import React from "react";
 import ReactPlayer from "react-player";
 import { useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import NotFound from "../NotFound";
 
 function Trailer() {
   const { pathname } = useLocation();
@@ -17,10 +18,10 @@ function Trailer() {
     navigate(-1);
   };
 
-  return (
+  return ytvideo ? (
     <>
       <div className="bg-[rgba(0,0,0,.9)] absolute top-0 left-0 z-[100] w-screen h-screen flex item-center justify-center">
-      <Link
+        <Link
           onClick={goBack}
           className="absolute top-[5%] right-[5%] text-white hover:text-[#6556CD] ri-close-fill text-3xl"
         ></Link>
@@ -31,6 +32,8 @@ function Trailer() {
         />
       </div>
     </>
+  ) : (
+    <NotFound />
   );
 }
 
