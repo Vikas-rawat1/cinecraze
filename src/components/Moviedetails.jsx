@@ -22,7 +22,7 @@ function Moviedetails() {
     return () => {
       dispatch(removemovie());
     };
-  }, []);
+  }, [id]);
   return info ? (
     <div
       style={{
@@ -33,7 +33,7 @@ function Moviedetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-screen h-screen px-[10%]"
+      className="w-screen h-[170vh] px-[10%]"
     >
       {/* PART 1 NAVIGATION */}
       <nav className="h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
@@ -156,7 +156,7 @@ function Moviedetails() {
       </div>
       {/* PART 3 Recomendations and Similar Stuff*/}
       <HorizontalCards
-        dat={info.recommendations ? info.recommendations : info.similar}
+        data={info.recommendations.length>0 ? info.recommendations : info.similar}
       />
     </div>
   ) : (
