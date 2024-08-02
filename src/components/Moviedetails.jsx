@@ -14,7 +14,7 @@ function Moviedetails() {
   const { id } = useParams();
   const { info } = useSelector((state) => state.movie);
   const dispatch = useDispatch();
-  // console.log(info);
+  console.log(info);
 
   useEffect(() => {
     dispatch(asyncloadmovie(id));
@@ -43,7 +43,10 @@ function Moviedetails() {
         <a target="_blank" href={info.detail.homepage}>
           <i className="ri-external/-link-fill"></i>
         </a>
-        <a target="_blank" href="">
+        <a
+          target="_blank"
+          href={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}
+        >
           <i className="ri-earth-fill"></i>
         </a>
         <a
@@ -63,67 +66,65 @@ function Moviedetails() {
           }`}
           alt=""
         />
-        <div>
-          {info.watchproviders &&
-            info.watchproviders.flatrate &&
-            info.watchproviders.flatrate.map((w) => (
-              <img
-                className="w-[5vh] h-[5vh] object-cover rounded-md"
-                src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
-                alt=""
-              />
-            ))}
+
+        <div className="content ml-[5%]">
+          <h1 className="text-5xl  font-black text-white">
+            {info.detail.title ||
+              info.detail.original_name ||
+              info.detail.original_title}
+
+            <small className="text-xl font-bold text-zinc-200 ">
+              ({info.detail.release_date.split("-")[0]})
+            </small>
+          </h1>
         </div>
+      </div>
 
-        {/* </div> */}
+      {/* PART 3 available on PLATFORM*/}
 
-        {/* PART 3 available on PLATFORM*/}
+      <div className="w-[80%] flex flex-col gap-y-5 mt-10">
+        {info.watchproviders && info.watchproviders.flatrate && (
+          <div className="flex gap-x-10 items-center text-white">
+            <h1>Available on Platform</h1>
 
-        {/* <div className="w-[80%] ">
-        <div className="mt-5">
-          {info.watchproviders &&
-            info.watchproviders.flatrate &&
-            info.watchproviders.flatrate.map((w) => (
+            {info.watchproviders.flatrate.map((w) => (
+              <img
+                title={w.title_name}
+                className="w-[5vh] h-[5vh] object-cover rounded-md"
+                src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
+                alt=""
+              />
+            ))}
+          </div>
+        )}
+
+        {info.watchproviders && info.watchproviders.rent && (
+          <div className="flex gap-x-10 items-center text-white">
+            <h1>Available on Rent</h1>
+
+            {info.watchproviders.rent.map((w) => (
               <img
                 className="w-[5vh] h-[5vh] object-cover rounded-md"
                 src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
                 alt=""
               />
             ))}
+          </div>
+        )}
 
-          {info.watchproviders && info.watchproviders.rent && (
-            <div className="flex gap-x-10 items-center text-white">
-              <h1>Available on Rent</h1>
-              {info.watchproviders.rent.map((w) => (
-                <img
-                  className="w-[5vh] h-[5vh] object-cover rounded-md"
-                  src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
-                  alt=""
-                />
-              ))}
-            </div>
-          )} */}
+        {info.watchproviders && info.watchproviders.buy && (
+          <div className="flex gap-x-10 items-center text-white">
+            <h1>Available to Buy</h1>
 
-        {/* {info.watchproviders &&
-            info.watchproviders.rent &&
-            info.watchproviders.rent.map((w) => (
+            {info.watchproviders.buy.map((w) => (
               <img
                 className="w-[5vh] h-[5vh] object-cover rounded-md"
                 src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
                 alt=""
               />
-            ))} */}
-        {/* {info.watchproviders &&
-            info.watchproviders.buy &&
-            info.watchproviders.buy.map((w) => (
-              <img
-                className="w-[5vh] h-[5vh] object-cover rounded-md"
-                src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
-                alt=""
-              />
-            ))} */}
-        {/* </div>
-      </div> */}
+            ))}
+          </div>
+        )}
       </div>
     </div>
   ) : (
