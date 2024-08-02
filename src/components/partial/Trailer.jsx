@@ -10,7 +10,7 @@ function Trailer() {
 
   const ytvideo = useSelector((state) => state[category].info.videos);
 
-  console.log(pathname.includes("movie"),ytvideo);
+  console.log(pathname.includes("movie"), ytvideo);
 
   const navigate = useNavigate();
 
@@ -23,6 +23,7 @@ function Trailer() {
       <div className="bg-[rgba(0,0,0,.9)] absolute top-0 left-0 z-[100] w-screen h-screen flex item-center justify-center">
         {ytvideo ? (
           <ReactPlayer
+            controls
             height={600}
             width={1000}
             url={`https://www.youtube.com/watch?v=${ytvideo.key}`}

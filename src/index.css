@@ -4,6 +4,9 @@
 
 /* primary-#1F1E24
 secondary- #6556CD */
+/* *{
+  overflow-x: hidden;
+} */
 
 ::-webkit-scrollbar {
   width: 7px;

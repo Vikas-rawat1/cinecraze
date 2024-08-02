@@ -49,11 +49,11 @@ function TvShows() {
   }, [category]);
   return tv.length > 0 ? (
     <>
-      <div className="  w-screen h-screen ">
+      <div className=" w-screen h-screen ">
         <div className="px-[5%] w-full h-[10vh]  flex  items-center justify-between">
           <i
             onClick={goBack}
-            className="hover:text-[#6556CD] ri-arrow-left-line text-3xl"
+            className="text-white hover:text-[#6556CD] ri-arrow-left-line text-2xl"
           ></i>{" "}
           <h1 className="text-xl text-zinc-400 font-semibold">
             Tv Shows

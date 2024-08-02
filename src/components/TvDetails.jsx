@@ -21,7 +21,7 @@ function TvDetails() {
   const { id } = useParams();
   const { info } = useSelector((state) => state.tv);
   const dispatch = useDispatch();
-  console.log(info);
+  // console.log(info);
 
   useEffect(() => {
     dispatch(asyncloadtv(id));
@@ -40,16 +40,16 @@ function TvDetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-screen h-[140vw] px-[10%]"
+      className="relative w-screen h-[140vw] px-[10%] "
     >
       {/* PART 1 NAVIGATION */}
       <nav className="mb-5 h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
         <Link
           onClick={goBack}
-          className="hover:text-[#6556CD] ri-arrow-left-line text-3xl"
+          className="text-white hover:text-[#6556CD] ri-arrow-left-line text-2xl"
         ></Link>
         <a target="_blank" href={info.detail.homepage}>
-          <i className="ri-external/-link-fill"></i>
+          <i className="ri-external-link-fill"></i>
         </a>
         <a
           target="_blank"
@@ -61,7 +61,7 @@ function TvDetails() {
           target="_blank"
           href={`https://www.imdb.com/title/${info.externalid.imdb_id}`}
         >
-          imdb
+          IMDB
         </a>
       </nav>
 
@@ -171,13 +171,13 @@ function TvDetails() {
       <div className="w-[100%] flex h-[70vh] overflow-y-hidden mb-5 p-5 ">
         {info.detail.seasons.length > 0 ? (
           info.detail.seasons.map((s, index) => (
-            <div className="w-[15vh] mr-[14%]" key={index}>
+            <div className="w-[16vw] mr-[4%]" key={index}>
               <img
                 className="shadow-[8px_17px_38px_2px_rgba(0.0.0.5)] h-[50vh] min-w-[14vw] object-cover"
                 src={`https://image.tmdb.org/t/p/original/${s.poster_path}`}
                 alt=""
               />
-              <h1 className="text-2xl text-zinc-300 mt-3 font-semibold">
+              <h1 className="text-xl text-zinc-300 mt-3 font-semibold">
                 {s.name}
               </h1>
             </div>

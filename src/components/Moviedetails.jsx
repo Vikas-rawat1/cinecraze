@@ -39,16 +39,16 @@ function Moviedetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-screen h-[100vw] px-[10%]"
+      className="relative w-screen h-[110vw] px-[10%]"
     >
       {/* PART 1 NAVIGATION */}
       <nav className="mb-6 h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
         <Link
           onClick={goBack}
-          className="hover:text-[#6556CD] ri-arrow-left-line text-3xl"
+          className="text-white hover:text-[#6556CD] ri-arrow-left-line text-2xl"
         ></Link>
         <a target="_blank" href={info.detail.homepage}>
-          <i className="ri-external/-link-fill"></i>
+          <i className="ri-external-link-fill"></i>
         </a>
         <a
           target="_blank"
@@ -60,7 +60,7 @@ function Moviedetails() {
           target="_blank"
           href={`https://www.imdb.com/title/${info.externalid.imdb_id}`}
         >
-          imdb
+          IMDB
         </a>
       </nav>
 
