@@ -55,13 +55,13 @@ function TvShows() {
             onClick={goBack}
             className="lg:block hidden text-white hover:text-[#6556CD] ri-arrow-left-line text-3xl"
           ></i>{" "}
-          <h1 className="lg:block hidden ml-6 lg:text-xl text-zinc-400 font-semibold ">
+          <h1 className="lg:block hidden lg:text-xl text-zinc-400 font-semibold ">
             Tv Shows
             <small className="text-sm ml-1 text-zinc-600">( {category})</small>
           </h1>
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:w-[80%]  lg:mt-0  lg:space-y-0 lg:space-x-4">
             <Topnav />
-            <h1 className="lg:hidden lg:text-xl text-zinc-400 font-semibold ">
+            <h1 className="lg:hidden ml-6  lg:text-xl text-zinc-400 font-semibold ">
               Tv Shows
               <small className="text-sm ml-1 text-zinc-600">
                 ( {category})
