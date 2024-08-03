@@ -56,7 +56,6 @@ function Trending() {
   }, [category, duration]);
 
   return trending.length > 0 ? (
-  // return (
     <>
       <div className="lg:w-screen lg:h-screen w-full text-white">
         <div className="lg:px-[5%] lg:w-full lg:h-[10vh] flex flex-col lg:flex-row lg:items-center lg:justify-between p-2 ">
@@ -94,7 +93,6 @@ function Trending() {
         </InfiniteScroll>
       </div>
     </>
-  // );
   ) : (
     <Loading />
   );
