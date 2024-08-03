@@ -102,7 +102,7 @@ function Topnav() {
           </div>
         )}
 
-        <div className="z-[100] absolute w-[60%] max-h-[50vh] bg-zinc-200 lg:top-[90%] lg:left-[2%] overflow-auto">
+        <div className="z-[100] absolute w-[90%] lg:w-[60%] max-h-[50vh] bg-zinc-200 top-[18vw] left-[4%] lg:top-[90%] lg:left-[2%] overflow-auto">
           {searches.map((s, index) => (
             <Link
               to={`/${s.media_type}/details/${s.id}`}
