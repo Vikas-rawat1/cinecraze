@@ -49,8 +49,8 @@ function Popular() {
   }, [category]);
   return popular.length > 0 ? (
     <>
-      <div className="lg:w-screen lg:h-screen w-full text-white">
-        <div className="lg:px-[5%] lg:w-full lg:h-[10vh] flex flex-col lg:flex-row lg:items-center lg:justify-between p-2 ">
+      <div className="lg:w-screen lg:h-screen w-full">
+      <div className="lg:px-[5%] lg:w-full lg:h-[10vh] flex flex-col lg:flex-row lg:items-center lg:justify-between p-2 ">
           <i
             onClick={goBack}
             className="lg:block hidden text-white hover:text-[#6556CD] ri-arrow-left-line text-3xl"
