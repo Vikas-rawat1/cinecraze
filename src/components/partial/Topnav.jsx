@@ -30,21 +30,21 @@ function Topnav() {
 
   return (
     <>
-      <div className="w-full lg:w-[80%] h-[10vh] relative items-center  flex   p-2">
+      <div className="w-full lg:w-[80%] h-[10vh] relative items-center m-auto flex  justify-between p-2">
         <div className="lg:hidden ">
           <i
             onClick={handleOpenMenu}
             className="text-zinc-400 ri-menu-line text-3xl ml-4 "
           ></i>
         </div>
-        <div>
+        <div className="flex items-center">
           <i className="text-zinc-400 text-xl ri-search-line lg:mx-5 mx-2"></i>
           <input
             onChange={(e) => setQuery(e.target.value)}
             value={query}
             type="text"
             placeholder="Search Anything"
-            className="w-[70%] lg:w-[60%] bg-red-700 text-zinc-200 lg:mx-1 lg:p-5 outline-none border-none bg-transparent ml-10"
+            className="w-[80%] lg:w-[60%] text-zinc-200 lg:mx-1 lg:p-5 outline-none border-none bg-transparent"
           />
           {query.length > 0 && (
             <i
