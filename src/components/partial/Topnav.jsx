@@ -49,7 +49,7 @@ function Topnav() {
           {query.length > 0 && (
             <i
               onClick={() => setQuery("")}
-           className="text-zinc-400 text-3xl ri-close-fill absolute right-2 lg:right-4 cursor-pointer"
+              className="text-zinc-400 text-3xl ri-close-fill absolute right-2 lg:right-4 cursor-pointer"
             ></i>
           )}
         </div>
@@ -61,11 +61,11 @@ function Topnav() {
             <div className="flex flex-col gap-4 font-poppins font-bold">
               <i
                 onClick={handleOpenMenu}
-                className="fixed right-0 text-zinc-400 text-4xl  ri-close-fill mt-5"
+                className="fixed right-5 text-zinc-400 text-4xl  ri-close-fill mt-5"
               ></i>
               <nav className="flex flex-col text-zinc-400 text-sm">
                 <h1 className="text-white font-semibold text-4xl mt-6">
-                  New Feeds
+                  <Link to="/">New Feeds</Link>
                 </h1>
                 <Link
                   to="/trending"
