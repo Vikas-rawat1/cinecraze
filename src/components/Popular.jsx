@@ -19,10 +19,10 @@ function Popular() {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   document.title = "CineCraze | Popular " + category.toUpperCase();
+
   const GetPopular = async () => {
     try {
-      const { data } = await axios.get(`${category}/popular?page=${page}`);
-      console.log(data);
+      const { data } = await axios.get(`/movie/popular?page=${page}`); // Example for movies
       if (data.results.length > 0) {
         setPopular((prevState) => [...prevState, ...data.results]);
         setPage(page + 1);
@@ -34,7 +34,7 @@ function Popular() {
     }
   };
 
-  const refreshHandler = () => {
+  const refershHandler = () => {
     if (popular.length === 0) {
       GetPopular();
     } else {
@@ -45,12 +45,13 @@ function Popular() {
   };
 
   useEffect(() => {
-    refreshHandler();
+    refershHandler();
   }, [category]);
+
   return popular.length > 0 ? (
     <>
       <div className="lg:w-screen lg:h-screen w-full">
-      <div className="lg:px-[5%] lg:w-full lg:h-[10vh] flex flex-col lg:flex-row lg:items-center lg:justify-between p-2 ">
+        <div className="lg:px-[5%] lg:w-full lg:h-[10vh] flex flex-col lg:flex-row lg:items-center lg:justify-between p-2 ">
           <i
             onClick={goBack}
             className="lg:block hidden text-white hover:text-[#6556CD] ri-arrow-left-line text-3xl"
@@ -61,7 +62,7 @@ function Popular() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:w-[80%]  lg:mt-0  lg:space-y-0 lg:space-x-4">
             <Topnav />
             <h1 className="lg:hidden ml-6 lg:text-xl text-zinc-400 font-semibold ">
-             Popular
+              Popular
               <small className="text-sm ml-1 text-zinc-600">
                 ( {category})
               </small>
@@ -75,14 +76,13 @@ function Popular() {
             </div>
           </div>
         </div>
-
         <InfiniteScroll
           dataLength={popular.length}
-          next={GetPopular()}
+          next={GetPopular}
           hasMore={hasMore}
-          loader={<h1>loading</h1>}
+          loader={<h1>Loading...</h1>}
         >
-          <Cards data={popular} title={popular} />
+          <Cards data={popular} title={category} />
         </InfiniteScroll>
       </div>
     </>
