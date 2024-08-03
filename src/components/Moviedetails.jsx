@@ -39,7 +39,7 @@ function Moviedetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-screen h-[110vw] px-[10%]"
+      className="relative w-screen h-[510vw] md:h-[280vw] lg:h-[110vw] px-[10%]"
     >
       {/* PART 1 NAVIGATION */}
       <nav className="mb-6 h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
@@ -65,7 +65,7 @@ function Moviedetails() {
       </nav>
 
       {/* PART 2 POSTER AND DETAILS */}
-      <div className="w-full h-auto flex">
+      <div className="lg:w-full h-auto flex lg:flex-row flex-col">
         <img
           className="shadow-[8px_17px_38px_2px_rgba(0.0.0.5)] w-[50vh] object-cover"
           src={`https://image.tmdb.org/t/p/original/${
@@ -74,7 +74,7 @@ function Moviedetails() {
           alt=""
         />
 
-        <div className="content ml-[5%] text-white">
+        <div className="content ml-[5%] text-white flex flex-col">
           <h1 className="text-4xl  font-black ">
             {info.detail.title ||
               info.detail.original_name ||
