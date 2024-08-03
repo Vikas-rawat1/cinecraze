@@ -31,7 +31,7 @@ function Cards({ data, title }) {
             </h1>
 
             {card.vote_average && (
-              <div className="absolute right-[-15%] bottom-[25%] rounded-full font-semibold text-xl bg-yellow-500 text-white w-[8vh] h-[8vh] lg:w-[10vh]  lg:h-[10vh] flex justify-center items-center">
+              <div className="absolute right-[-10%] lg:right-[-15%] bottom-[25%] rounded-full font-semibold text-xl bg-yellow-500 text-white w-[8vh] h-[8vh] lg:w-[10vh]  lg:h-[10vh] flex justify-center items-center">
                 {(card.vote_average * 10).toFixed()} <sup>%</sup>
               </div>
             )}
