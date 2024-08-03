@@ -55,28 +55,34 @@ function Trending() {
     refreshHandler();
   }, [category, duration]);
 
-  return trending.length > 0 ? (
+  // return trending.length > 0 ? (
+  return (
     <>
-      <div className="  w-screen h-screen ">
-        <div className="px-[5%] w-full h-[10vh]  flex  items-center justify-between">
+      <div className="lg:w-screen lg:h-screen w-full text-white">
+        <div className="lg:px-[5%] lg:w-full lg:h-[10vh] flex flex-col lg:flex-row lg:items-center lg:justify-between p-2 ">
           <i
             onClick={goBack}
-            className="hover:text-[#6556CD] ri-arrow-left-line text-3xl"
+            className="lg:block hidden text-white hover:text-[#6556CD] ri-arrow-left-line text-3xl"
           ></i>{" "}
-          <h1 className="text-xl text-zinc-400 font-semibold">Trending</h1>
-          <div className="flex items-center w-[80%]">
+          <h1 className="lg:block hidden lg:text-xl text-zinc-400 font-semibold ">
+            Trending
+          </h1>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:w-[80%] mt-4 lg:mt-0 space-y-4 lg:space-y-0 lg:space-x-4">
             <Topnav />
-            <Dropdown
-              title="Category"
-              options={["movie", "tv", "all"]}
-              func={(e) => setCategory(e.target.value)}
-            />
-            <div className="w-[2%]"></div>
-            <Dropdown
-              title="Duration"
-              options={["week", "day"]}
-              func={(e) => setDuration(e.target.value)}
-            />
+            <div className="flex space-x-4">
+              <Dropdown
+                title="Category"
+                options={["movie", "tv", "all"]}
+                func={(e) => setCategory(e.target.value)}
+              />
+              <div className="w-[2%]"></div>
+              <Dropdown
+                // width="2vw"
+                title="Duration"
+                options={["week", "day"]}
+                func={(e) => setDuration(e.target.value)}
+              />
+            </div>
           </div>
         </div>
 
@@ -90,9 +96,10 @@ function Trending() {
         </InfiniteScroll>
       </div>
     </>
-  ) : (
-    <Loading />
   );
+  // ) : (
+  //   <Loading />
+  // );
 }
 
 export default Trending;
