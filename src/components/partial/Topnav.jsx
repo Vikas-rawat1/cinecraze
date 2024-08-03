@@ -21,11 +21,21 @@ function Topnav() {
   useEffect(() => {
     GetSearches();
   }, [query]);
+
+  const [toggle, setToggle] = useState();
+
+  const handleOpenMenu = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <>
-      <div className="w-full lg:w-[80%] h-[10vh] relative  items-center m-auto flex  ">
+      <div className="w-full lg:w-[80%] h-[10vh] relative items-center m-auto flex  justify-between p-2">
         <div className="lg:hidden ">
-          <i className="text-[#6556CD] ri-menu-line text-2xl"></i>
+          <i
+            onClick={handleOpenMenu}
+            className="text-zinc-400 ri-menu-line text-3xl ml-4 "
+          ></i>
         </div>
         <div>
           <i className="text-zinc-400 text-xl ri-search-line lg:mx-5 mx-2"></i>
@@ -43,7 +53,56 @@ function Topnav() {
             ></i>
           )}
         </div>
-        <div className="z-[100] absolute w-[60%] max-h-[50vh] bg-zinc-200 top-[90%] left-[2%] overflow-auto">
+
+        {/* Mobile Menu */}
+
+        {toggle && (
+          <div className="fixed top-0 left-0 w-full h-full bg-[#0c0c0c] text-white flex flex-col px-6 py-4 z-50">
+            <div className="flex flex-col gap-4 font-poppins font-bold">
+              <i
+                onClick={handleOpenMenu}
+                className="fixed right-0 text-zinc-400 text-4xl  ri-close-fill mt-5"
+              ></i>
+              <nav className="flex flex-col text-zinc-400 text-sm">
+                <h1 className="text-white font-semibold text-4xl mt-6">
+                  New Feeds
+                </h1>
+                <Link
+                  to="/trending"
+                  className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5 text-2xl mt-5"
+                >
+                  <i className="ri-fire-line"></i> Trending
+                </Link>
+                <Link
+                  to="/popular"
+                  className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5 text-2xl mt-2"
+                >
+                  <i className="ri-bard-fill"></i> Popular
+                </Link>
+                <Link
+                  to="/movie"
+                  className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5 text-2xl mt-2"
+                >
+                  <i className="ri-movie-2-fill"></i> Movies
+                </Link>
+                <Link
+                  to="/tv"
+                  className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5 text-2xl mt-2"
+                >
+                  <i className="ri-tv-fill"></i> TV Shows
+                </Link>
+                <Link
+                  to="/person"
+                  className="hover:bg-[#6556CD] hover:text-white rounded-lg  p-5 text-2xl mt-2"
+                >
+                  <i className="ri-team-fill"></i> People
+                </Link>
+              </nav>
+            </div>
+          </div>
+        )}
+
+        <div className="z-[100] absolute w-[60%] max-h-[50vh] bg-zinc-200 lg:top-[90%] lg:left-[2%] overflow-auto">
           {searches.map((s, index) => (
             <Link
               to={`/${s.media_type}/details/${s.id}`}
