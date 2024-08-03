@@ -55,7 +55,7 @@ function TvShows() {
             onClick={goBack}
             className="lg:block hidden text-white hover:text-[#6556CD] ri-arrow-left-line text-3xl"
           ></i>{" "}
-          <h1 className="lg:block hidden lg:text-xl text-zinc-400 font-semibold ">
+          <h1 className="lg:block  lg:text-xl text-zinc-400 font-semibold ">
             Tv Shows
             <small className="text-sm ml-1 text-zinc-600">( {category})</small>
           </h1>
