@@ -35,7 +35,7 @@ function Moviedetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-full min-h-[300vh] lg:min-h-[230vh] px-[10%] bg-black"
+      className="relative w-full min-h-[320vh] lg:min-h-[230vh] px-[10%] bg-black"
     >
       {/* PART 1 NAVIGATION */}
       <nav className="mb-6 h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
