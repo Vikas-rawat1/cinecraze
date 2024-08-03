@@ -49,20 +49,18 @@ function People() {
   }, [category]);
   return person.length > 0 ? (
     <>
-      <div className="  w-screen h-screen ">
-        <div className="px-[5%] w-full h-[10vh]  flex  items-center justify-between">
+      <div className="lg:w-screen lg:h-screen w-full">
+        <div className="lg:px-[5%] lg:w-full lg:h-[10vh] flex flex-col lg:flex-row lg:items-center lg:justify-between p-2 ">
           <i
             onClick={goBack}
-            className="text-white hover:text-[#6556CD] ri-arrow-left-line text-2xl"
+            className="lg:block hidden text-white hover:text-[#6556CD] ri-arrow-left-line text-3xl"
           ></i>{" "}
-          <h1 className="text-xl text-zinc-400 font-semibold">
+          <h1 className="lg:block hidden lg:text-xl text-zinc-400 font-semibold ">
             People
             <small className="text-sm ml-1 text-zinc-600">({category})</small>
           </h1>
-          <div className="flex items-center w-[80%]">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:w-[80%]  lg:mt-0  lg:space-y-0 lg:space-x-4">
             <Topnav />
-
-            <div className="w-[2%]"></div>
           </div>
         </div>
 
@@ -72,7 +70,7 @@ function People() {
           hasMore={hasMore}
           loader={<h1>loading</h1>}
         >
-          <Cards data={person} title="person"/>
+          <Cards data={person} title="person" />
         </InfiniteScroll>
       </div>
     </>
