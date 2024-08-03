@@ -40,7 +40,7 @@ function TvDetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-screen h-[140vw] px-[10%] "
+       className="relative w-full min-h-[300vh] lg:min-h-[230vh] px-[10%] bg-black"
     >
       {/* PART 1 NAVIGATION */}
       <nav className="mb-5 h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
@@ -66,7 +66,7 @@ function TvDetails() {
       </nav>
 
       {/* PART 2 POSTER AND DETAILS */}
-      <div className="w-full h-auto flex">
+      <div className="lg:w-full h-auto flex lg:flex-row flex-col">
         <img
           className="shadow-[8px_17px_38px_2px_rgba(0.0.0.5)] w-[50vh] object-cover"
           src={`https://image.tmdb.org/t/p/original/${
