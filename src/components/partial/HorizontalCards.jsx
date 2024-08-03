@@ -6,7 +6,7 @@ function HorizontalCards({ data }) {
   // const
   return (
     <>
-      <div className="lg:w-[100%] lg:flex h-[70vh] overflow-y-scroll lg:overflow-y-hidden mb-5 p-5">
+      <div className="lg:w-[100%] lg:flex h-[70vh] overflow-y-auto lg:overflow-y-hidden mb-5 p-5">
         {data.length > 0 ? (
           data.map((card, index) => (
             <Link
