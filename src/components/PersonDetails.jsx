@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { asyncloadperson, removeperson } from "../store/actions/personActions";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+// import HorizontalCards from "./partials/HorizontalCards";
+import Loading from "./Loading";
+import Dropdown from "./partial/Dropdown";
+import HorizontalCards from "./partial/HorizontalCards";
 
-function PersonDetails() {
+const PersonDetails = () => {
+  document.title = "SCSDB | Person Details";
+
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const { info } = useSelector((state) => state.person);
+  const dispatch = useDispatch();
+  const [category, setcategory] = useState("movie");
+
+  useEffect(() => {
+    dispatch(asyncloadperson(id));
+    return () => {
+      dispatch(removeperson());
+    };
+  }, [id]);
+
   return info ? (
     <div className="px-[10%] w-screen h-[150vh] bg-[#1F1E24] ">
       {/* Part 1 navigation */}
       <nav className="h-[10vh] w-full text-zinc-100 flex items-center gap-10 text-xl ">
         <Link
           onClick={() => navigate(-1)}
-          className="text-white hover:text-[#6556CD] ri-arrow-lezft-line text-2xl"
+          className="hover:text-[#6556CD] ri-arrow-left-line"
         ></Link>
       </nav>
 
@@ -140,5 +163,6 @@ function PersonDetails() {
   ) : (
     <Loading />
   );
-}
+};
+
 export default PersonDetails;
