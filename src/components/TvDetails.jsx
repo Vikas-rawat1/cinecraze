@@ -40,7 +40,7 @@ function TvDetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-       className="relative w-full min-h-[300vh] lg:min-h-[230vh] px-[10%] bg-black"
+       className="relative w-full min-h-[390vh] lg:min-h-[230vh] px-[10%] bg-black"
     >
       {/* PART 1 NAVIGATION */}
       <nav className="mb-5 h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
@@ -85,7 +85,7 @@ function TvDetails() {
               ({info.detail.first_air_date.split("-")[0]})
             </small>
           </h1>{" "}
-          <div className="mt-3 mb-5 flex  items-center gap-x-5 gap-y-10">
+          <div className="mt-3 mb-5 flex flex-wrap lg:flex-row items-center gap-x-5 gap-y-10">
             <span className=" rounded-full font-semibold text-sm bg-yellow-500 text-white w-[8vh] h-[8vh] flex justify-center items-center">
               {(info.detail.vote_average * 10).toFixed()} <sup>%</sup>
             </span>
@@ -171,7 +171,7 @@ function TvDetails() {
       <div className="w-[100%] flex h-[70vh] overflow-y-hidden mb-5 p-5 ">
         {info.detail.seasons.length > 0 ? (
           info.detail.seasons.map((s, index) => (
-            <div className="w-[16vw] mr-[4%]" key={index}>
+            <div className="lg:w-[16vw] mr-[4%]" key={index}>
               <img
                 className="shadow-[8px_17px_38px_2px_rgba(0.0.0.5)] h-[50vh] min-w-[14vw] object-cover"
                 src={`https://image.tmdb.org/t/p/original/${s.poster_path}`}
