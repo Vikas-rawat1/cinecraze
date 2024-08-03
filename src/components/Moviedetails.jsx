@@ -35,7 +35,7 @@ function Moviedetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="relative w-full min-h-[300vh] lg:min-h-[200vh] px-[10%] bg-black"
+      className="relative w-full min-h-[300vh] lg:min-h-[230vh] px-[10%] bg-black"
     >
       {/* PART 1 NAVIGATION */}
       <nav className="mb-6 h-[10vh] w-full flex items-center gap-10 text-xl text-zinc-100">
@@ -80,7 +80,7 @@ function Moviedetails() {
               ({info.detail.release_date.split("-")[0]})
             </small>
           </h1>
-          <div className="mt-3 mb-5 flex items-center gap-x-5 gap-y-10">
+          <div className="mt-3 mb-5 flex flex-wrap lg:flex-row items-center gap-x-5 gap-y-10">
             <span className="rounded-full font-semibold text-sm bg-yellow-500 text-white w-[8vh] h-[8vh] flex justify-center items-center">
               {(info.detail.vote_average * 10).toFixed()} <sup>%</sup>
             </span>
@@ -101,7 +101,7 @@ function Moviedetails() {
           <h1 className="text-xl mb-3 mt-5">Movie Translated</h1>
           <p className="mb-10">{info.translations.join(", ")}</p>
           <Link
-            className="p-3 overflow-hidden bg-[#6556CD] rounded-lg"
+            className="p-2 w-fit lg:w-[20%] overflow-hidden bg-[#6556CD] rounded-lg"
             to={`${pathname}/trailer`}
           >
             <i className="text-xl ri-play-fill mr-3"></i>
