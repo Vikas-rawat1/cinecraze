@@ -33,7 +33,7 @@ function Trailer() {
         )}
         <Link
           onClick={goBack}
-          className="absolute top-[5%] right-[5%] text-white hover:text-[#6556CD] ri-close-fill text-3xl"
+          className="absolute top-[5%] right-[15%] text-white hover:text-[#6556CD] ri-close-fill text-3xl"
         ></Link>
       </div>
     </>
