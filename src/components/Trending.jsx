@@ -67,15 +67,15 @@ function Trending() {
           <h1 className="lg:block hidden lg:text-xl text-zinc-400 font-semibold ">
             Trending
           </h1>
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:w-[80%] mt-4 lg:mt-0 space-y-4 lg:space-y-0 lg:space-x-4">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:w-[80%]  lg:mt-0  lg:space-y-0 lg:space-x-4">
             <Topnav />
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-4">
               <Dropdown
                 title="Category"
                 options={["movie", "tv", "all"]}
                 func={(e) => setCategory(e.target.value)}
               />
-              <div className="w-[2%]"></div>
+              {/* <div className="w-[2%]"></div> */}
               <Dropdown
                 // width="2vw"
                 title="Duration"

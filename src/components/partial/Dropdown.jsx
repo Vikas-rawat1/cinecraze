@@ -8,7 +8,7 @@ function Dropdown({ title, options, func }) {
         onChange={func}
         name="format"
         id="format"
-        className="w-40 h-10 flex  items-center   lg:w-[10vw] lg:h-[3vw] rounded-lg"
+        className="w-40 h-10 flex m-auto  items-center lg:w-[10vw] lg:h-[3vw] rounded-md"
       >
         <option value="0" disabled>
           {title}{" "}
