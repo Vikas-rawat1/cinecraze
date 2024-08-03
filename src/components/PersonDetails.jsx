@@ -8,7 +8,7 @@ import Dropdown from "./partial/Dropdown";
 import HorizontalCards from "./partial/HorizontalCards";
 
 const PersonDetails = () => {
-  document.title = "SCSDB | Person Details";
+  document.title = "CineCraze | Person Details";
 
   const { pathname } = useLocation();
   const navigate = useNavigate();

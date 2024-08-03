@@ -6,16 +6,16 @@ function HorizontalCards({ data }) {
   // const
   return (
     <>
-      <div className="w-[100%] flex h-[70vh] overflow-y-hidden mb-5 p-5">
+      <div className="lg:w-[100%] lg:flex h-[70vh] lg:overflow-y-hidden mb-5 p-5">
         {data.length > 0 ? (
           data.map((card, index) => (
             <Link
               to={`/${card.media_type}/details/${card.id}`}
               key={index}
-              className="min-w-[25%] h-[30vw] mr-5 mb-5 bg-zinc-900"
+              className="lg:min-w-[25%] lg:h-[30vw] w-[20vw] mr-5 mb-5 bg-zinc-900"
             >
               <img
-                className="w-full h-[55%] object-cover"
+                className="lg:w-full h-[55%] object-cover "
                 src={
                   card.backdrop_path || card.backdrop_path
                     ? `https://image.tmdb.org/t/p/original/${
@@ -25,7 +25,7 @@ function HorizontalCards({ data }) {
                 }
                 alt=""
               />
-              <div className="text-white p-3 h-[45%] overflow-y-auto">
+              <div className="text-white p-3 lg:h-[45%] overflow-y-auto">
                 <h1 className="text-xl font-semibold mt-2">
                   {card.title || card.original_name || card.original_title}
                 </h1>

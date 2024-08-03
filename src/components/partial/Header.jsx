@@ -14,7 +14,7 @@ function Header({ data }) {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-        className="w-full h-[70vh] flex flex-col justify-end items-start p-[5%]"
+        className="w-full h-[70vh] flex flex-col justify-center lg:justify-end items-start p-[5%]"
       >
         <h1 className="w-[70%] w-[70%]text-5xl font-black text-white">
           {data.title || data.original_name || data.original_title}
@@ -25,7 +25,6 @@ function Header({ data }) {
             to={`/${data.media_type}/details/${data.id}`}
             className="text-blue-400"
           >
-          
             more
           </Link>
         </p>
@@ -35,7 +34,10 @@ function Header({ data }) {
           <i className="ml-5 text-yellow-500 ri-album-fill"></i>{" "}
           {data.media_type.toUpperCase()}
         </p>
-        <Link to={`/${data.media_type}/details/${data.id}/trailer`} className="p-2 rounded text-white mt-6 bg-[#6556CD]">
+        <Link
+          to={`/${data.media_type}/details/${data.id}/trailer`}
+          className=" p-2 rounded text-white mt-6 bg-[#6556CD]"
+        >
           Watch Trailers
         </Link>
       </div>

@@ -8,7 +8,7 @@ import Dropdown from "./partial/Dropdown";
 import Loading from "./Loading";
 
 function Home() {
-  document.title = "CineCraze | HomePage" ;
+  document.title = "CineCraze | HomePage";
   const [wallpaper, setWallpaper] = useState(null);
   const [trending, setTrending] = useState(null);
   const [category, setCategory] = useState("all");
@@ -43,11 +43,11 @@ function Home() {
   return wallpaper && trending ? (
     <>
       <Sidenav />
-      <div className="w-[80%] h-full overflow-auto overflow-x-hidden">
+      <div className="w-full lg:w-[80%] h-full overflow-auto overflow-x-hidden">
         <Topnav />
         <Header data={wallpaper} />
-        <div className="p-10  flex justify-between items-center">
-          <h1 className="text-3xl text-zinc-400  font-semibold p-5 ">
+        <div className="p-4 lg:p-10  flex justify-between items-center">
+          <h1 className="text-xl lg:text-3xl text-zinc-400  font-semibold p-1 mr-6 lg:mr-0 lg:p-5 ">
             Trending
           </h1>
           <Dropdown
@@ -60,7 +60,7 @@ function Home() {
       </div>
     </>
   ) : (
-    <Loading/>
+    <Loading />
   );
 }
 
