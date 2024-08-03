@@ -12,10 +12,10 @@ function HorizontalCards({ data }) {
             <Link
               to={`/${card.media_type}/details/${card.id}`}
               key={index}
-              className="lg:min-w-[25%] lg:h-[30vw] w-[20vw] mr-5 mb-5 bg-zinc-900"
+              className="lg:min-w-[25%] lg:h-[30vw]  mr-5 mb-5 bg-zinc-900"
             >
               <img
-                className="lg:w-full h-[55%] object-cover "
+                className="w-full h-[55%] object-cover "
                 src={
                   card.backdrop_path || card.backdrop_path
                     ? `https://image.tmdb.org/t/p/original/${
