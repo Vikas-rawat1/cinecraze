@@ -30,7 +30,7 @@ function Topnav() {
 
   return (
     <>
-      <div className="w-full lg:w-[80%] h-[10vh] relative items-center m-auto flex  justify-between p-2">
+      <div className="w-full lg:w-[80%] h-[10vh] relative items-center lg:m-auto flex  justify-between p-2">
         <div className="lg:hidden ">
           <i
             onClick={handleOpenMenu}
