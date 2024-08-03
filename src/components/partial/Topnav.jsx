@@ -44,7 +44,7 @@ function Topnav() {
             value={query}
             type="text"
             placeholder="Search Anything"
-           className="flex-grow text-zinc-200 p-2 lg:p-4 outline-none border-none rounded-l-md"
+            className="flex-grow  text-zinc-200 p-2 lg:p-4 outline-none border-none rounded-l-md bg-transparent "
           />
           {query.length > 0 && (
             <i
