@@ -6,7 +6,7 @@ function Cards({ data, title }) {
   // console.log(data)
   return (
     <>
-      <div className="w-full flex flex-wrap gap-10  p-[5%] bg-[#1F1E24] overflow-hidden overflow-x-hidden">
+      <div className="w-full justify-center m-auto flex flex-wrap gap-10 p-[5%] bg-[#1F1E24] overflow-hidden overflow-x-hidden">
         {data.map((card, index) => (
           <Link
             to={`/${card.media_type || title}/details/${card.id}`}
