@@ -49,7 +49,7 @@ function TvShows() {
   }, [category]);
   return tv.length > 0 ? (
     <>
-      <div className="lg:w-screen lg:h-screen w-full ">
+      <div className="lg:w-screen lg:h-screen w-full  ">
         <div className="lg:px-[5%] lg:w-full lg:h-[10vh] flex flex-col lg:flex-row lg:items-center lg:justify-between p-2 ">
           <i
             onClick={goBack}
