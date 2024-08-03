@@ -30,7 +30,7 @@ function Topnav() {
 
   return (
     <>
-      <div className="w-full lg:w-[80%] h-[10vh] relative items-center m-auto flex  justify-between p-2">
+      <div className="w-full lg:w-[80%] h-[10vh] relative items-center  flex   p-2">
         <div className="lg:hidden ">
           <i
             onClick={handleOpenMenu}
@@ -44,7 +44,7 @@ function Topnav() {
             value={query}
             type="text"
             placeholder="Search Anything"
-            className="w-[80%] lg:w-[60%] text-zinc-200 lg:mx-1 lg:p-5 outline-none border-none bg-transparent"
+            className="w-[70%] lg:w-[60%] bg-red-700 text-zinc-200 lg:mx-1 lg:p-5 outline-none border-none bg-transparent ml-10"
           />
           {query.length > 0 && (
             <i
