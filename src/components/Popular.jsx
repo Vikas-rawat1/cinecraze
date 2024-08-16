@@ -32,7 +32,7 @@ function Popular() {
     } catch (error) {
       console.log("Error: ", error);
     }
-  };s
+  };
 
   const refershHandler = () => {
     if (popular.length === 0) {
