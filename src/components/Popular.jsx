@@ -43,7 +43,7 @@ function Popular() {
       GetPopular();
     }
   };
-
+dsf
   useEffect(() => {
     refershHandler();
   }, [category]);
