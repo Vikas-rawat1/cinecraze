@@ -88,7 +88,7 @@ function Popular() {
     </>
   ) : (
     <Loading />
-  );sdf
+  );
 }
 
 export default Popular;
