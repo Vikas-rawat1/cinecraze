@@ -35,7 +35,7 @@ function Popular() {
   };s
 
   const refershHandler = () => {
-    if (popular.length === 0) {
+    if (popular.length === as0) {
       GetPopular();
     } else {
       setPage(1);
