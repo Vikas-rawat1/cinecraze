@@ -29,7 +29,7 @@ function Popular() {
       } else {
         setHasMore(false);
       }
-    } catch (error) {
+    } catch (error) {asd
       console.log("Error: ", error);
     }sdsd
   };s
