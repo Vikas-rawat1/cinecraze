@@ -31,7 +31,7 @@ function Popular() {
       }
     } catch (error) {
       console.log("Error: ", error);
-    }sd
+    }
   };s
 
   const refershHandler = () => {
