@@ -42,8 +42,8 @@ function Popular() {
       setPopular([]);
       GetPopular();
     }
-  }; dfgsdf
-dfgsdf
+  }; dfg
+dfg
   useEffect(() => {
     refershHandler();
   }, [category]);
