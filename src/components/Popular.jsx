@@ -43,7 +43,7 @@ function Popular() {
       GetPopular();
     }
   }; dfg
-dfg
+dfgsdf
   useEffect(() => {
     refershHandler();
   }, [category]);
