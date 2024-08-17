@@ -43,7 +43,7 @@ function Popular() {
       GetPopular();
     }
   }; dfgsdf
-dfgsdfsdfsdf
+dfgsdfsdf
   useEffect(() => {
     refershHandler();
   }, [category]);
