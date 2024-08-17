@@ -42,7 +42,7 @@ function Popular() {
       setPopular([]);
       GetPopular();
     }
-  }; h
+  }; hkl
 
   useEffect(() => {
     refershHandler();
