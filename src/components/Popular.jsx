@@ -42,7 +42,6 @@ function Popular() {
       setPopular([]);
       GetPopular();
     }
-  };
 sdf
   useEffect(() => {
     refershHandler();
