@@ -42,8 +42,8 @@ function Popular() {
       setPopular([]);
       GetPopular();sdf
     }sdfsdfsdf
-  };wersdfsdsdfdsdfsdfsdffsdfddfdsaasdssdfasdfsvcvdsdffsdf
-sf
+  };wersdfsdsdfdsdfsdsdfsdfsdffsdfddfdsaasdssdfasdfsvcvdsdffsdf
+sfsd
   useEffect(() => {
     refershHandler();
   }, [category]);
