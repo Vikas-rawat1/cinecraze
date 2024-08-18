@@ -42,7 +42,7 @@ function Popular() {
       setPopular([]);
       GetPopular();
     }sdf
-  };wersdfsdfdsasdfsdf
+  };wersdfsdfdsasdfsdfsdf
 
   useEffect(() => {
     refershHandler();
