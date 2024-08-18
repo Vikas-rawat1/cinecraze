@@ -38,12 +38,12 @@ function Popular() {
     if (popular.length === 0) {
       GetPopular();
     } else {
-      setPage(1);sdf
+      setPage(1);
       setPopular([]);
-      GetPopular();sdf
-    }sdfsdfsdf
-  };wersdfsdsdffsdfddfdsaasdssdfasdfsvcvdsdffsdf
-sf
+      GetPopular();
+    }
+  };
+
   useEffect(() => {
     refershHandler();
   }, [category]);
