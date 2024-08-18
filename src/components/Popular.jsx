@@ -41,8 +41,8 @@ function Popular() {
       setPage(1);
       setPopular([]);
       GetPopular();
-    }
-  };wersdf
+    }sdf
+  };wersdfsdf
 
   useEffect(() => {
     refershHandler();
