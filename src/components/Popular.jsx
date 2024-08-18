@@ -41,7 +41,7 @@ function Popular() {
       setPage(1);sdf
       setPopular([]);
       GetPopular();
-    }sdf
+    }sdfsdf
   };wersdfsdfdsasdfsdfsdf
 
   useEffect(() => {
