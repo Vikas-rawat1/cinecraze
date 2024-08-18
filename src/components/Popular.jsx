@@ -40,7 +40,7 @@ function Popular() {
     } else {
       setPage(1);sdf
       setPopular([]);
-      GetPopular();
+      GetPopular();sdf
     }sdfsdfsdf
   };wersdfsdfdsasdfsvcvdsdffsdf
 sf
