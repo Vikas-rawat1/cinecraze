@@ -1,4 +1,4 @@
-hshimport React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidenav from "./partial/Sidenav";
 import Topnav from "./partial/Topnav";
 import axios from "../utils/axios";
