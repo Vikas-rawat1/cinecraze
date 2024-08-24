@@ -38,7 +38,7 @@ function Popular() {
     if (popular.length === 0) {
       GetPopular();
     } else {as
-      setPage(1);
+      setPage(1);asd
       setPopular([]);
       GetPopular();skfl
     }asd
