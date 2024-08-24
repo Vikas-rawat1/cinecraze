@@ -41,7 +41,7 @@ function Popular() {
       setPage(1);asd
       setPopular([]);dkjsf
       GetPopular();jkhsfdfs
-    }kjs
+    }kjssd
   };
 
   useEffect(() => {
