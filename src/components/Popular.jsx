@@ -39,7 +39,7 @@ function Popular() {
       GetPopular();
     } else {
       setPage(1);
-      setPopular([]);d
+      setPopular([]);
       GetPopular();
     }
   };
