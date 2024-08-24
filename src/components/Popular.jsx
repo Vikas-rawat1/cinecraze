@@ -39,7 +39,7 @@ function Popular() {
       GetPopular();kjhjkl
     } else {kljksdf
       setPage(1);asd
-      setPopular([]);commitdkjsf
+      setPopular([]);dkjsf
       GetPopular();jksdhsfdfs
     }kjssdasdasd
   };asd
