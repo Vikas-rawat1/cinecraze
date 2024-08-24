@@ -40,7 +40,7 @@ function Popular() {
     } else {kljk
       setPage(1);
       setPopular([]);d
-      GetPopular();
+      GetPopular();jkh
     }
   };
 
