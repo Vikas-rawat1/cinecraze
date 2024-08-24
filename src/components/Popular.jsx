@@ -40,7 +40,7 @@ function Popular() {
     } else {kljksdf
       setPage(1);asd
       setPopular([]);dkjsf
-      GetPopular();jksdhsfdfs
+      GetPopular();jkhsfdfs
     }kjssd
   };
 
