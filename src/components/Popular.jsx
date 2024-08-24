@@ -41,7 +41,7 @@ function Popular() {
       setPage(1);
       setPopular([]);d
       GetPopular();jkh
-    }kj
+    }
   };
 
   useEffect(() => {
