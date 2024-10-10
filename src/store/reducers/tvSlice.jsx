@@ -11,7 +11,7 @@ export const tvSlice = createSlice({
     },
 
    removetv: (state, action) => {
-      state.info = null;
+     state.info = null;
     },
   },
 });
